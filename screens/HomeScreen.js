@@ -3,7 +3,7 @@ import { View, Text, Button, StyleSheet, ScrollView} from 'react-native';
 import MainHeader from '../components/MainHeader';
 import ScreenHeader from '../components/ScreenHeader';
 import TopPlacesCarousel from '../components/TopPlacesCarousel';
-import { PLACES, TOP_PLACES } from '../data';
+import { PLACES, TOP_PLACES } from '../data/index.js';
 import SectionHeader from '../components/SectionHeader';
 import TripsList from '../components/TripsList';
 

@@ -1,20 +1,22 @@
 // change to InsectList
 
-import React from 'react';
-import {Image, View, StyleSheet, TouchableOpacity, Text} from 'react-native';
-import {colors, shadow, sizes, spacing} from '../constants/theme';
-import FavoriteButton from './FavoriteButton';
+import React from "react";
+import { Image, View, StyleSheet, TouchableOpacity, Text } from "react-native";
+import { colors, shadow, sizes, spacing } from "../constants/theme";
+import FavoriteButton from "./FavoriteButton";
+import { useNavigation } from "@react-navigation/native";
 
 const CARD_WIDTH = sizes.width / 2 - (spacing.l + spacing.l / 2);
 const CARD_HEIGHT = 220;
 
-const TripsList = ({list}) => {
+const TripsList = ({ list }) => {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       {list.map((item, index) => {
         return (
           <TouchableOpacity style={styles.cardContainer} key={item.id}>
-            <View style={[styles.card, shadow.light]} >
+            <View style={[styles.card, shadow.light]}>
               <View style={styles.imageBox}>
                 <Image style={styles.image} source={item.image} />
               </View>
@@ -33,34 +35,32 @@ const TripsList = ({list}) => {
   );
 };
 
-
 const styles = StyleSheet.create({
-    container: {
-        flexDirection: 'row',
-        flexWrap: 'wrap',
-    },
-    cardContainer: {
-        marginLeft: spacing.l,
-        marginBottom: spacing.l,
-    },
-    card: {
-        widtH: CARD_WIDTH,
-        height: CARD_HEIGHT,
-        backgroundColor: colors.white,
-    },
-    imageBox: {
-        width: CARD_WIDTH,
-        height: CARD_HEIGHT - 60,
-        borderTopLeftRadius: sizes.radius,
-        borderTopRightRadius: sizes.radius,
-        overflow: 'hidden',
-    },
-    image: {
-        width: CARD_WIDTH,
-        height: CARD_HEIGHT - 60,
-        resizeMode: 'cover',
-    },
+  container: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+  },
+  cardContainer: {
+    marginLeft: spacing.l,
+    marginBottom: spacing.l,
+  },
+  card: {
+    widtH: CARD_WIDTH,
+    height: CARD_HEIGHT,
+    backgroundColor: colors.white,
+  },
+  imageBox: {
+    width: CARD_WIDTH,
+    height: CARD_HEIGHT - 60,
+    borderTopLeftRadius: sizes.radius,
+    borderTopRightRadius: sizes.radius,
+    overflow: "hidden",
+  },
+  image: {
+    width: CARD_WIDTH,
+    height: CARD_HEIGHT - 60,
+    resizeMode: "cover",
+  },
+});
 
-})
-
-export default TripsList
+export default TripsList;

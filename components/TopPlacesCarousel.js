@@ -9,12 +9,15 @@ import {
   } from 'react-native';
   import {colors, shadow, sizes, spacing} from '../constants/theme';
   import FavoriteButton from './FavoriteButton.js';
+  import {useNavigation} from '@react-navigation/native';
 
 const CARD_WIDTH = sizes.width - 80;
 const CARD_HEIGHT = 200;
 const CARD_WIDTH_SPACING = CARD_WIDTH + spacing.l;
 
 const TopPlacesCarousel = ({list}) => {
+  // ปุ่ม navation 
+  const navigation = useNavigation();
   return (
     <FlatList
       data={list}
@@ -26,10 +29,17 @@ const TopPlacesCarousel = ({list}) => {
       renderItem={({item, index}) => {
         return (
           <TouchableOpacity
+          /* ปุ่ม navation */
+            onPress={ () => {
+              navigation.navigate('TripDetails', {trip: item});
+            }
+
+            }
             style={{
               marginLeft: spacing.l,
               marginRight: index === list.length - 1 ? spacing.l : 0,
             }}>
+              
             <View style={[styles.card, shadow.dark]}>
                 {/* from favoritebutton.js */}
               <FavoriteButton style={styles.favorite} />
