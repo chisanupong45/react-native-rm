@@ -13,8 +13,8 @@ const TripsList = ({list}) => {
     <View style={styles.container}>
       {list.map((item, index) => {
         return (
-          <TouchableOpacity style={styles.cardContainer}>
-            <View style={[styles.card, shadow.light]} key={item.id}>
+          <TouchableOpacity style={styles.cardContainer} key={item.id}>
+            <View style={[styles.card, shadow.light]} >
               <View style={styles.imageBox}>
                 <Image style={styles.image} source={item.image} />
               </View>

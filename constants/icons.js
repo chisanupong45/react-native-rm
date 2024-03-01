@@ -5,6 +5,8 @@ const Favorite = require('../assets/icons/Favorite.png');
 const FavoriteFilled = require('../assets/icons/Favorite_filled.png');
 // const Hamburger = require('../../assets/icons/Hamburger.png');
 const Notification = require('../assets/icons/Notification.png');
+const Camera = require('../assets/icons/img_search.png');
+
 
 export default {
   Home,
@@ -13,4 +15,5 @@ export default {
   Hamburger,
   Search,
   Notification,
+  Camera,
 };

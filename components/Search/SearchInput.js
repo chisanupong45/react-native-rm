@@ -8,7 +8,7 @@ const SearchInput = () => {
       <View style={styles.search}>
         <Pressable onPress={() => alert("Search clicked")}>
           <Image
-            source={require("../../assets/icons/search.png")}
+            source={require("../../assets/icons/Search.png")}
             style={{
               width: 20,
               height: 20,

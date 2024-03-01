@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Text, View, StyleSheet} from 'react-native';
+import {Button, Text, View, StyleSheet, Pressable} from 'react-native';
 import {sizes, spacing} from '../constants/theme';
 
 //  ปุ่มทั้งหมดอยู่ที่ไฟล์นี้

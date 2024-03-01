@@ -32,7 +32,6 @@ const HomeScreen = () => {
                 {/* ปุ่มทั้งหมดมาจากไฟล์ SectionHeader */}
                 <SectionHeader  title="เลือกสิ่งที่คุณสนใจได้ที่นี้" buttonTitle="ทั้งหมด" onPress={() => {}}/>
                 <TripsList list={PLACES}/>
-
             </ScrollView>
         </View>
     );
