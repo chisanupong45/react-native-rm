@@ -1,19 +1,24 @@
 import React from 'react';
-import {View, StyleSheet, Image} from 'react-native';
-import {colors, sizes, spacing} from '../constants/theme';
-import Icon from '../components/Icon';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
-import {SharedElement} from 'react-navigation-shared-element';
-import TripDetailsCard from '../components/TripDetailsCard';
+import { View, StyleSheet } from 'react-native';
+import { colors, sizes, spacing } from '../constants/theme';
+import Icon from '../components/shared/Icon';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import TripDetailsCard from '../components/TripDetailsCard/TripDetailsCard';
 import * as Animatable from 'react-native-animatable';
+import TripDetailsCarousel from '../components/TripDetailsCarousel';
 
-const TripDetailsScreen = ({navigation, route}) => {
+
+const TripDetailsScreen = ({ navigation, route }) => {
   const insets = useSafeAreaInsets();
-  const {trip} = route.params;
+  const { trip } = route.params;
+
+  // Check if trip and trip.gallery are defined before accessing properties
+  const slides = [trip?.image, ...(trip?.gallery || [])].filter(Boolean);
+
   return (
     <View style={styles.container}>
       <Animatable.View
-        style={[styles.backButton, {marginTop: insets.top}]}
+        style={[styles.backButton, { marginTop: insets.top }]}
         animation="fadeIn"
         delay={500}
         duration={400}
@@ -24,23 +29,14 @@ const TripDetailsScreen = ({navigation, route}) => {
           onPress={navigation.goBack}
         />
       </Animatable.View>
-      <SharedElement
-        id={`trip.${trip.id}.image`}
-        style={StyleSheet.absoluteFillObject}>
-        <View style={[StyleSheet.absoluteFillObject, styles.imageBox]}>
-          <Image
-            source={trip.image}
-            style={[StyleSheet.absoluteFillObject, styles.image]}
-          />
-        </View>
-      </SharedElement>
+      <TripDetailsCarousel slides={slides} id={trip.id} />
       <TripDetailsCard trip={trip} />
     </View>
   );
 };
 
-TripDetailsScreen.sharedElements = route => {
-  const {trip} = route.params;
+TripDetailsScreen.sharedElements = (route) => {
+  const { trip } = route.params;
   return [
     {
       id: `trip.${trip.id}.image`,

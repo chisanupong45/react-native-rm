@@ -8,7 +8,7 @@ import {
     Image,
   } from 'react-native';
   import {colors, shadow, sizes, spacing} from '../constants/theme';
-  import FavoriteButton from './FavoriteButton.js';
+  import FavoriteButton from '../components/shared/FavoriteButton';
   import {useNavigation} from '@react-navigation/native';
 
 const CARD_WIDTH = sizes.width - 80;

@@ -6,6 +6,7 @@ export const TOP_PLACES = [
       location: 'Formicidae',
       description:
         'The ultimate Amalfi Coast travel guide, where to stay, where to eat, and what areas to visit in the Amalfi Coast of Italy. Positano, Ravello, Amalfi and more',
+      gallery: [],
     },
     {
       id: 2,
@@ -14,6 +15,7 @@ export const TOP_PLACES = [
       location: 'Formicidae',
       description:
         'Granada is the capital city of the province of Granada, in the autonomous community of Andalusia, Spain',
+      gallery: [],
     },
     {
       id: 3,
@@ -22,7 +24,9 @@ export const TOP_PLACES = [
       location: 'Formicidae',
       description:
         "Cherry blossoms usually bloom between mid-March and early May. In 2022, Tokyo's cherry blossom season officially began on March 20",
+      gallery: [],
     },
+    
   ];
   
   export const PLACES = [
@@ -33,6 +37,11 @@ export const TOP_PLACES = [
       location: 'Formicidae',
       description:
         "Cappadocia's landscape includes dramatic expanses of soft volcanic rock, shaped by erosion into towers, cones, valleys, and caves. Rock-cut churches and underground tunnel complexes from the Byzantine and Islamic eras are scattered throughout the countryside.",
+      gallery: [
+        require('../assets/images/Ant_Formicidae.jpeg'),
+        require('../assets/images/Ant_Formicidae.jpeg'),
+        require('../assets/images/Ant_Formicidae.jpeg'),
+      ]
     },
     {
       id: 5,

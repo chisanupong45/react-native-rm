@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet} from 'react-native'
-import MainHeader from '../components/MainHeader';
+import MainHeader from '../components/shared/MainHeader';
 import SearchInput from '../components/Search/SearchInput';
 import TabSearch from '../components/TabSearch';
 

@@ -3,7 +3,7 @@
 import React from "react";
 import { Image, View, StyleSheet, TouchableOpacity, Text } from "react-native";
 import { colors, shadow, sizes, spacing } from "../constants/theme";
-import FavoriteButton from "./FavoriteButton";
+import FavoriteButton from "./shared/FavoriteButton";
 import { useNavigation } from "@react-navigation/native";
 
 const CARD_WIDTH = sizes.width / 2 - (spacing.l + spacing.l / 2);

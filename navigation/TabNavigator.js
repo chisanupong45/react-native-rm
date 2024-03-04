@@ -3,7 +3,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/HomeScreen';
 import SearchScreen from '../screens/SearchScreen';
 import CameraScreen from '../screens/CameraScreen';
-import Icon from '../components/Icon';
+import Icon from '../components/shared/Icon';
 import {colors, sizes} from '../constants/theme';
 import {StyleSheet, Animated} from 'react-native';
 

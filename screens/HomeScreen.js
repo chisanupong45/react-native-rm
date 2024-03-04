@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet, ScrollView} from 'react-native';
-import MainHeader from '../components/MainHeader';
-import ScreenHeader from '../components/ScreenHeader';
+import MainHeader from '../components/shared/MainHeader.js';
+import ScreenHeader from '../components/shared/ScreenHeader.js';
 import TopPlacesCarousel from '../components/TopPlacesCarousel';
 import { PLACES, TOP_PLACES } from '../data/index.js';
 import SectionHeader from '../components/SectionHeader';
